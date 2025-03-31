@@ -1,0 +1,8 @@
+<h1><%= title %></h1>
+<div class="container" id="listado">
+    <ul>
+        <% bandas.forEach(banda => {%>
+         <li><a href="/bandas/id/<%= banda.id %>"><%= banda.nombre %> <%= banda.genero %></a></li>   
+        <% }); %>
+    </ul>
+</div>

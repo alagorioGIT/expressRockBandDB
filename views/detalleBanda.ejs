@@ -1,0 +1,24 @@
+<h1><%= title %></h1>
+<div class="container" id="detalle">
+<h1>Nombre: <%= banda.nombre %></h1>
+<h1>Integrantes #:<%= banda.integrantes %></h1>
+<h1>Genero: <%= banda.genero %></h1>
+<h1>Top Temas: </h1>
+<div>
+    <ul>
+        <% let canciones=banda.topCanciones;
+        canciones.forEach(cancion => { %>
+            <li><%= cancion %></li>
+        <%}); %>
+    </ul>
+</div>
+<h1> Foto Banda</h1>
+<img src="/images/<%= banda.cover %>" alt="" width="420" height="315">
+<h1>Video</h1>
+<iframe width="420" height="315"
+    <% let videoID= banda.video.split("=") %> 
+    src="https://www.youtube.com/embed/<%= videoID[1] %>">
+</iframe>
+
+</div>
+
